@@ -3,6 +3,13 @@
     let email = '';
     let address = '';
     let message = '';
+
+    let items = [
+    { text: "Innføre en universell grunninntekt (UBI) for å sikre økonomisk trygghet for alle borgere, finansiert av AI-generert velstand." },
+    { text: "Innføre en rettferdig beskatning på AI-generert inntekt for å sikre at velstanden fordeles blant hele befolkningen, ikke bare hos store selskaper." },
+    { text: "Implementere strenge etiske og juridiske retningslinjer for utvikling og bruk av AI for å beskytte personvern og sikre ansvarlig innovasjon." },
+    { text: "Bygge en nasjonal serverpark og AI-infrastruktur for å sikre at Norge beholder suverenitet og kontroll over vår egen AI-teknologi og data." }
+    ];
   
     const requestForm = () => {
       // Here, you would handle the form request, e.g., send the information to your backend
@@ -24,7 +31,7 @@
       
       <div class="mb-8">
         <h3 class="text-xl font-semibold mb-2">Last ned skjemaet</h3>
-        <a href="/path-to-your-form.pdf" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Last ned skjema</a>
+        <a href="https://drive.google.com/file/d/1rknTONjqfXqdd2d5Pi_YUD69aDMLT922/view?usp=sharing" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Last ned skjema</a>
       </div>
       
       <div>
@@ -55,11 +62,10 @@
       <p class="mb-6">AI-alliansen er et norsk politisk parti dedikert til å sikre at menneskeheten er forberedt på AGI-æraen (kunstig generell intelligens). Vårt mål er å sikre at rikdommen generert av AGI kommer hele menneskeheten til gode, ikke bare "eierne" av modellene og forretningstycoonene.</p>
       <h3 class="text-xl font-semibold mb-2">Våre mål</h3>
       <ul class="list-disc list-inside mb-6">
-        <li>Innføre en universell grunninntekt (UBI) for å sikre økonomisk trygghet for alle borgere, finansiert av AI-generert velstand.</li>
-        <li>Innføre en rettferdig beskatning på AI-generert inntekt for å sikre at velstanden fordeles blant hele befolkningen, ikke bare hos store selskaper.</li>
-        <li>Implementere strenge etiske og juridiske retningslinjer for utvikling og bruk av AI for å beskytte personvern og sikre ansvarlig innovasjon.</li>
-        <li>Bygge en nasjonal serverpark og AI-infrastruktur for å sikre at Norge beholder suverenitet og kontroll over vår egen AI-teknologi og data.</li>
-      </ul>
+            {#each items as item (item.text)}
+                <li class="py-2">{item.text}</li>
+        {/each}
+    </ul>
       <h3 class="text-xl font-semibold mb-2">Hvorfor bli med i AI-alliansen?</h3>
       <p class="mb-6">Vi ser at dagens politikere ofte har et kortsiktig fokus og mangler teknologisk forståelse for de store endringene som kommer med AI. AI-alliansen vil sikre at Norge er forberedt på AI-æraen ved å tenke langsiktig og teknologisk fremover. Ved å bli med i AI-alliansen blir du en del av en bevegelse som har som mål å forme fremtiden for AI på en måte som gagner alle. Sammen kan vi sørge for at fremskrittene innen AI og AGI leder til et mer rettferdig og velstående samfunn for alle.</p>
     </section>
